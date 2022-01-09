@@ -35,6 +35,13 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  ${mobile({
+  marginLeft: "10px"
+
+})}
+
+  
+
 `;
 
 const Input = styled.input`
@@ -49,7 +56,10 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
+  ${mobile({
+  fontSize: "24px",
+  paddingLeft: "15px"
+})}
 `;
 const Right = styled.div`
   flex: 1;
@@ -78,7 +88,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>SAMYOG</Logo>
+          <Logo>STORE</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
