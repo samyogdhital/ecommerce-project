@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { mobile } from "../responsive";
+
 
 
 const Container = styled.div`
@@ -12,6 +14,9 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  ${mobile({
+  height: "20vh"
+})}
 
 `;
 
@@ -40,15 +45,15 @@ font-weight : 600;
 `
 
 const CategoryItem = ({ item }) => {
-    return (
-        <Container>
-            <Image src={item.img} />
-            <Info>
-                <Title>{item.title}</Title>
-                <Button>SHOP NOW</Button>
-            </Info>
-        </Container>
-    )
+  return (
+    <Container>
+      <Image src={item.img} />
+      <Info>
+        <Title>{item.title}</Title>
+        <Button>SHOP NOW</Button>
+      </Info>
+    </Container>
+  )
 }
 
 export default CategoryItem
