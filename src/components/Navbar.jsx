@@ -1,8 +1,8 @@
-import { Badge } from '@material-ui/core'
-import { Search, ShoppingCartOutlined } from '@material-ui/icons'
-import React from 'react'
-import styled from 'styled-components'
-import { mobile } from "../responsive"
+import { Badge } from "@material-ui/core";
+import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import React from "react";
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
@@ -67,30 +67,31 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-    return (
-        <Container>
-            <Wrapper>
-                <Left>
-                    <Language>EN</Language>
-                    <SearchContainer>
-                        <Input placeholder="Search" />
-                        <Search style={{ color: "gray", fontSize: 16 }} />
-                    </SearchContainer>
-                </Left>
-                <Center>
-                    <Logo>SAMYOG.</Logo>
-                </Center>
-                <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN IN</MenuItem>
-                    <MenuItem>SIGN UP</MenuItem>
-                    <Badge badgeContent={4} color="primary">
-                        <ShoppingCartOutlined />
-                    </Badge>
-                </Right>
-            </Wrapper>
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Wrapper>
+        <Left>
+          <Language>EN</Language>
+          <SearchContainer>
+            <Input placeholder="Search" />
+            <Search style={{ color: "gray", fontSize: 16 }} />
+          </SearchContainer>
+        </Left>
+        <Center>
+          <Logo>SAMYOG</Logo>
+        </Center>
+        <Right>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Badge badgeContent={4} color="primary">
+              <ShoppingCartOutlined />
+            </Badge>
+          </MenuItem>
+        </Right>
+      </Wrapper>
+    </Container>
+  );
+};
 
-export default Navbar
+export default Navbar;
